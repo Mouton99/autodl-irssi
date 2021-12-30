@@ -628,7 +628,7 @@ sub _setNick {
 	}
 	elsif ($self->{info}{nickservCommand} ne "") {
 		$self->_message(4, "Sending custom NickServ command: " . $self->{info}{nickservCommand});
-		$self->command($self->{info}{nickservCommand});
+		$self->command(fixCommandString($self->{info}{nickservCommand}));
 	}
 	elsif (!$self->_hasCorrectNick()) {
 		$self->_forceSetNick();
