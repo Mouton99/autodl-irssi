@@ -574,6 +574,7 @@ sub getServerInfo {
 			identEmail => "",
 			channels => {},
 			serverPassword => "",
+			nickservCommand => "",
 		};
 	}
 	return $serverInfo;
@@ -593,6 +594,7 @@ sub doHeaderServer {
 			'ident-password' => 'identPassword',
 			'ident-email' => 'identEmail',
 			'server-password' => 'serverPassword',
+			'nickserv-command' => 'nickservCommand',
 		});
 	}
 }
